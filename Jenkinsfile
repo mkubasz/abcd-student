@@ -26,13 +26,11 @@ pipeline {
                         bkimminich/juice-shop
                     sleep 5
                 '''
-                sh 'echo "Setting permissions for ${WORKSPACE}/zap" && chmod -R 777 ${WORKSPACE}/zap || echo "Failed to chmod ${WORKSPACE}/zap"'
                 sh '''
                     # Run ZAP scan
                     docker run --name zap \
                         --add-host=host.docker.internal:host-gateway \
-                        -v ${WORKSPACE}/zap:/zap/wrk:rw \
-                        -v ${WORKSPACE}/passive.yaml:/zap/wrk/passive.yaml:rw \
+                        -v ${WORKSPACE}/.zap:/zap/wrk:rw \
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \
                         "
                         ls -la /zap/wrk;
