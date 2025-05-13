@@ -15,6 +15,7 @@ pipeline {
         stage('[ZAP] Baseline passive-scan') {
             steps {
                 sh 'mkdir -p results/'
+                sh 'echo "Listing workspace contents:" && ls -la ${WORKSPACE} && echo "Listing ${WORKSPACE}/zap contents:" && ls -la ${WORKSPACE}/zap || echo "Warning: ${WORKSPACE}/zap directory not found or ls failed"'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
