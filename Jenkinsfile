@@ -14,7 +14,12 @@ pipeline {
         }
         stage('[ZAP] Baseline passive-scan') {
             steps {
-                sh 'mkdir -p results/ zap/reports/'
+                sh '''
+                    # Create directories with proper permissions
+                    mkdir -p results/
+                    mkdir -p zap/reports/
+                    chmod -R 777 zap/ results/
+                '''
                 sh '''
                     # Clean up any existing containers with these names
                     docker rm -f juice-shop || true
@@ -31,9 +36,9 @@ pipeline {
                     docker run --name zap \\
                         --add-host=host.docker.internal:host-gateway \\
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
+                        -v ${WORKSPACE}/zap/reports:/zap/wrk/reports:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
-                        "mkdir -p /zap/wrk/reports && \\
-                        zap.sh -cmd -addonupdate && \\
+                        "zap.sh -cmd -addonupdate && \\
                         zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta && \\
                         zap.sh -cmd -autorun /zap/wrk/passive.yaml" \\
                         || true
