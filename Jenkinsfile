@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'mkdir -p results/'
                 sh 'mkdir -p ${WORKSPACE}/zap && touch ${WORKSPACE}/zap/passive.yaml'
+                sh 'chmod 777 ${WORKSPACE}/zap/passive.yaml'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
