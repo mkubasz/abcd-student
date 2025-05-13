@@ -19,11 +19,11 @@ pipeline {
                     mkdir -p results/
                     mkdir -p zap/reports/
                     
-                    # Make sure the passive.yaml is in the right location
-                    cp -f passive.yaml zap/
-                    
                     # Set permissions
                     chmod -R 777 zap/ results/
+                    
+                    # List the zap directory to verify files
+                    echo "ZAP directory contents:"
                     ls -la zap/
                 '''
                 sh '''
@@ -44,12 +44,18 @@ pipeline {
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
                         -v ${WORKSPACE}/zap/reports:/zap/wrk/reports:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
-                        "ls -la /zap/wrk/ && \\
-                        cat /zap/wrk/passive.yaml && \\
-                        zap.sh -cmd -addonupdate && \\
-                        zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta && \\
-                        zap.sh -cmd -autorun /zap/wrk/passive.yaml" \\
-                        || true
+                        "echo 'Contents of /zap/wrk/:' && \\
+                        ls -la /zap/wrk/ && \\
+                        if [ -f /zap/wrk/passive.yaml ]; then \\
+                            echo 'Passive scan configuration file found' && \\
+                            zap.sh -cmd -addonupdate && \\
+                            zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta && \\
+                            zap.sh -cmd -autorun /zap/wrk/passive.yaml; \\
+                        else \\
+                            echo 'ERROR: passive.yaml not found!' && \\
+                            exit 1; \\
+                        fi" \\
+                        || echo "ZAP scan failed but continuing the pipeline"
                 '''
             }
             post {
