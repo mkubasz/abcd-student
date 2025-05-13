@@ -18,7 +18,13 @@ pipeline {
                     # Create directories with proper permissions
                     mkdir -p results/
                     mkdir -p zap/reports/
+                    
+                    # Make sure the passive.yaml is in the right location
+                    cp -f passive.yaml zap/
+                    
+                    # Set permissions
                     chmod -R 777 zap/ results/
+                    ls -la zap/
                 '''
                 sh '''
                     # Clean up any existing containers with these names
@@ -38,7 +44,9 @@ pipeline {
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
                         -v ${WORKSPACE}/zap/reports:/zap/wrk/reports:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
-                        "zap.sh -cmd -addonupdate && \\
+                        "ls -la /zap/wrk/ && \\
+                        cat /zap/wrk/passive.yaml && \\
+                        zap.sh -cmd -addonupdate && \\
                         zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta && \\
                         zap.sh -cmd -autorun /zap/wrk/passive.yaml" \\
                         || true
