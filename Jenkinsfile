@@ -16,6 +16,10 @@ pipeline {
             steps {
                 sh 'mkdir -p zap/results/'
                 sh '''
+                docker stop juice-shop
+                sleep 5
+                docker rm juice-shop
+                sleep 5
                     docker run --name juice-shop -d --rm \
                         -p 3000:3000 \
                         bkimminich/juice-shop
