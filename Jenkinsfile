@@ -16,6 +16,7 @@ pipeline {
             steps {
                 sh 'mkdir -p results/'
                 sh 'mkdir -p ${WORKSPACE}/zap && touch ${WORKSPACE}/zap/passive.yaml'
+                sh 'ls -la'
                 sh 'chmod 777 ${WORKSPACE}/zap/passive.yaml'
                 sh '''
                     docker rm -f juice-shop || true
@@ -33,7 +34,9 @@ pipeline {
                         --add-host=host.docker.internal:host-gateway \\
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
-                        "zap.sh -cmd -addonupdate; 
+                        "
+                        ls -la;
+                        zap.sh -cmd -addonupdate; 
                         zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \\
                         || true
                 '''
