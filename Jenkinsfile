@@ -15,22 +15,22 @@ pipeline {
         stage('[ZAP] Baseline passive-scan') {
             steps {
                 sh 'mkdir -p results/'
-                sh 'echo "Listing workspace contents:" && ls -la ${WORKSPACE} && echo "Listing ${WORKSPACE}/zap contents:" && ls -la ${WORKSPACE}/zap || echo "Warning: ${WORKSPACE}/zap directory not found or ls failed"'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
                     
                     # Start the Juice Shop container
-                    docker run --name juice-shop -d --rm \\
-                        -p 3000:3000 \\
+                    docker run --name juice-shop -d --rm \
+                        -p 3000:3000 \
                         bkimminich/juice-shop
                     sleep 5
                 '''
+                sh 'echo "Setting permissions for ${WORKSPACE}/zap" && chmod -R 777 ${WORKSPACE}/zap || echo "Failed to chmod ${WORKSPACE}/zap"'
                 sh '''
                     # Run ZAP scan
                     docker run --name zap \
                         --add-host=host.docker.internal:host-gateway \
-                        -v ${WORKSPACE}/zap/passive.yaml:/zap/wrk/passive.yaml:rw \
+                        -v ${WORKSPACE}/zap:/zap/wrk/:rw \
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \
                         "
                         ls -la /zap/wrk;
