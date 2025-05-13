@@ -15,9 +15,6 @@ pipeline {
         stage('[ZAP] Baseline passive-scan') {
             steps {
                 sh 'mkdir -p results/'
-                sh 'mkdir -p ${WORKSPACE}/zap && touch ${WORKSPACE}/zap/passive.yaml'
-                sh 'ls -la'
-                sh 'chmod 777 ${WORKSPACE}/zap/passive.yaml'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
@@ -35,7 +32,7 @@ pipeline {
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
                         "
-                        ls -la;
+                        ls -la /zap/wrk;
                         zap.sh -cmd -addonupdate; 
                         zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \\
                         || true
