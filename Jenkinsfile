@@ -30,12 +30,13 @@ pipeline {
                     # Run ZAP scan
                     docker run --name zap \
                         --add-host=host.docker.internal:host-gateway \
-                        -v ${WORKSPACE}/zap:/zap/wrk/:rw \
+                        -v ${WORKSPACE}/zap/passive.yaml:/opt/custom_zap_config/my_passive_config.yaml:rw \
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \
                         "
-                        ls -la /zap/wrk;
+                        mkdir -p /opt/custom_zap_config && echo 'Checking /opt/custom_zap_config:' && ls -la /opt/custom_zap_config/; 
+                        echo 'Checking /zap/wrk:' && ls -la /zap/wrk/; 
                         zap.sh -cmd -addonupdate; 
-                        zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \
+                        zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /opt/custom_zap_config/my_passive_config.yaml" \
                         || true
                 '''
             }
