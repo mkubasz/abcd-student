@@ -33,6 +33,7 @@ pipeline {
                         -v ${WORKSPACE}/.zap:/zap/wrk:rw \
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \
                         "
+                        chmod 777 /zap/wrk;
                         ls -la /zap/wrk;
                         zap.sh -cmd -addonupdate; 
                         zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \
