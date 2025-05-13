@@ -14,7 +14,7 @@ pipeline {
         }
         stage('[ZAP] Baseline passive-scan') {
             steps {
-                sh 'mkdir -p results/'
+                sh 'mkdir -p results/ zap/reports/'
                 sh '''
                     # Clean up any existing containers with these names
                     docker rm -f juice-shop || true
@@ -32,16 +32,24 @@ pipeline {
                         --add-host=host.docker.internal:host-gateway \\
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \\
-                        "zap.sh -cmd -addonupdate; zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \\
+                        "mkdir -p /zap/wrk/reports && \\
+                        zap.sh -cmd -addonupdate && \\
+                        zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta && \\
+                        zap.sh -cmd -autorun /zap/wrk/passive.yaml" \\
                         || true
                 '''
             }
             post {
                 always {
                     sh '''
-                        # Copy reports
-                        docker cp zap:/zap/wrk/reports/zap_html_report.html ${WORKSPACE}/results/zap_html_report.html || true
-                        docker cp zap:/zap/wrk/reports/zap_xml_report.xml ${WORKSPACE}/results/zap_xml_report.xml || true
+                        # Verify if the container is still running
+                        if docker ps | grep -q zap; then
+                            # List files in the reports directory to debug
+                            docker exec zap ls -la /zap/wrk/reports || true
+                            
+                            # Copy reports
+                            docker cp zap:/zap/wrk/reports/. ${WORKSPACE}/results/ || true
+                        fi
                         
                         # Clean up containers
                         docker stop zap juice-shop || true
