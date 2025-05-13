@@ -15,6 +15,7 @@ pipeline {
         stage('[ZAP] Baseline passive-scan') {
             steps {
                 sh 'mkdir -p results/'
+                sh 'cp zap/passive.yaml ${WORKSPACE}/passive.yaml'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
@@ -30,7 +31,8 @@ pipeline {
                     # Run ZAP scan
                     docker run --name zap \
                         --add-host=host.docker.internal:host-gateway \
-                        -v ${WORKSPACE}/zap:/zap/wrk/:rw \
+                        -v ${WORKSPACE}/zap:/zap/wrk:rw \
+                        -v ${WORKSPACE}/passive.yaml:/zap/wrk/passive.yaml:rw \
                         -t ghcr.io/zaproxy/zaproxy:stable bash -c \
                         "
                         ls -la /zap/wrk;
