@@ -15,7 +15,7 @@ pipeline {
         stage('[ZAP] Baseline passive-scan') {
             steps {
                 sh 'mkdir -p results/'
-                sh 'cp zap/passive.yaml ${WORKSPACE}/passive.yaml'
+                sh 'cp ${WORKSPACE}/.zap/passive.yaml ${WORKSPACE}/passive.yaml'
                 sh '''
                     docker rm -f juice-shop || true
                     docker rm -f zap || true
