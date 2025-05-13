@@ -16,12 +16,18 @@ pipeline {
             steps {
                 sh 'mkdir -p results/'
                 sh '''
+                    # Clean up any existing containers with these names
+                    docker rm -f juice-shop || true
+                    docker rm -f zap || true
+                    
+                    # Start the Juice Shop container
                     docker run --name juice-shop -d --rm \\
                         -p 3000:3000 \\
                         bkimminich/juice-shop
                     sleep 5
                 '''
                 sh '''
+                    # Run ZAP scan
                     docker run --name zap \\
                         --add-host=host.docker.internal:host-gateway \\
                         -v ${WORKSPACE}/zap:/zap/wrk/:rw \\
@@ -33,10 +39,13 @@ pipeline {
             post {
                 always {
                     sh '''
-                        docker cp zap:/zap/wrk/reports/zap_html_report.html ${WORKSPACE}/results/zap_html_report.html
-                        docker cp zap:/zap/wrk/reports/zap_xml_report.xml ${WORKSPACE}/results/zap_xml_report.xml
-                        docker stop zap juice-shop
-                        docker rm zap
+                        # Copy reports
+                        docker cp zap:/zap/wrk/reports/zap_html_report.html ${WORKSPACE}/results/zap_html_report.html || true
+                        docker cp zap:/zap/wrk/reports/zap_xml_report.xml ${WORKSPACE}/results/zap_xml_report.xml || true
+                        
+                        # Clean up containers
+                        docker stop zap juice-shop || true
+                        docker rm zap || true
                     '''
                 }
             }
