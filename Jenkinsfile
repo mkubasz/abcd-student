@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh 'mkdir -p results/'
                 sh ''' 
-                    docker rm juice-shop 
+                    docker stop juice-shop && docker rm juice-shop 
                     sleep 5
                 '''
                 sh '''
