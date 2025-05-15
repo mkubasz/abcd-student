@@ -30,8 +30,8 @@ pipeline {
                     docker run --name zap \
                         --add-host=host.docker.internal:host-gateway \
                         -v /Users/mkubaszek/Projects/abcd/abcd-student/.zap:/zap/wrk/:rw \
-                   -t ghcr.io/zaproxy/zaproxy:stable bash -c \
-                "zap.sh -cmd -addonupdate; zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \
+                        -t ghcr.io/zaproxy/zaproxy:stable bash -c \
+                        "zap.sh -cmd -addonupdate; zap.sh -cmd -addoninstall communityScripts -addoninstall pscanrulesAlpha -addoninstall pscanrulesBeta -autorun /zap/wrk/passive.yaml" \
                 || true
                 '''
             }
@@ -44,6 +44,26 @@ pipeline {
                         docker rm zap || true
                         docker rm juice-shop || true
                     '''
+                    archiveArtifacts artifacts: 'results/*.html, results/*.xml', allowEmptyArchive: true
+                }
+            }
+        }
+        stage('OSV-Scanner') {
+            steps {
+                sh 'mkdir -p results/'
+                sh '''
+                         if ! command -v osv-scanner &> /dev/null; then
+                        curl -sSL https://github.com/google/osv-scanner/releases/download/v2.0.0/osv-scanner-linux-amd64 -o /usr/local/bin/osv-scanner
+                        chmod +x /usr/local/bin/osv-scanner
+                    fi
+                '''
+            }
+            post {
+                always {
+                    sh '''
+                        osv-scanner -r . > results/osv-response.json || true
+                    '''
+                    archiveArtifacts artifacts: 'results/osv-response.json', allowEmptyArchive: true
                 }
             }
         }
