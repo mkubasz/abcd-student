@@ -61,7 +61,7 @@ pipeline {
             post {
                 always {
                     sh '''
-                        osv-scanner -r . > results/osv-response.json || true
+                        osv-scanner -r package-lock.json > results/osv-response.json || true
                     '''
                     archiveArtifacts artifacts: 'results/osv-response.json', allowEmptyArchive: true
                 }
