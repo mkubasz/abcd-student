@@ -52,8 +52,11 @@ pipeline {
             steps {
                 sh 'mkdir -p results/'
                 sh '''
-                         if ! command -v osv-scanner &> /dev/null; then
-                        curl -sSL https://github.com/google/osv-scanner/releases/download/v2.0.0/osv-scanner-linux-amd64 -o /usr/local/bin/osv-scanner
+                    if ! command -v osv-scanner &> /dev/null; then
+                            LATEST_TAG=$(curl -s https://api.github.com/repos/google/osv-scanner/releases/latest | 
+                                grep "tag_name" | 
+                                sed 's/.*"tag_name": "\(.*\)",/\1/')
+                        curl -sSL https://github.com/google/osv-scanner/releases/download/$LATEST_TAG/osv-scanner-linux-amd64 -o /usr/local/bin/osv-scanner
                         chmod +x /usr/local/bin/osv-scanner
                     fi
                 '''
