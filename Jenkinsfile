@@ -68,5 +68,19 @@ pipeline {
                 }
             }
         }
+        stage('SAST Scan') {
+            steps {
+                sh 'mkdir -p results/'
+                sh '''
+                    curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin
+                    trufflehog git file://. --only-verified --fail > results/trufflehog_report.txt || true
+                '''
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'results/trufflehog_report.txt', allowEmptyArchive: true
+                }
+            }
+        }
     }
 }
