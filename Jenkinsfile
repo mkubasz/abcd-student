@@ -82,5 +82,23 @@ pipeline {
                 }
             }
         }
+        stage('Semgrep Scan') {
+            steps {
+                sh 'mkdir -p results/'
+                sh '''
+                    if ! command -v semgrep &> /dev/null; then
+                        pip install semgrep
+                    fi
+                '''
+                sh '''
+                    semgrep --config auto --json > results/semgrep_report.json || true
+                '''
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'results/semgrep_report.json', allowEmptyArchive: true
+                }
+            }
+        }
     }
 }
