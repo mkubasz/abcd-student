@@ -2,9 +2,9 @@ env:
   contexts:
     - name: test-context
       urls:
-        - "http://127.0.0.1:8000/api/"
+        - "http://host.docker.internal:3000/"
       includePaths:
-        - "http://127.0.0.1:8000/api/.*"
+        - "http://host.docker.internal:3000/.*"
   parameters:
     failOnError: true
     failOnWarning: false
