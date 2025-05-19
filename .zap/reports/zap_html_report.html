@@ -212,7 +212,7 @@ td {
 	</h2>
 
 	<h3>
-		Generated on Mon, 19 May 2025 15:50:35
+		Generated on Mon, 19 May 2025 15:56:07
 	</h3>
 
 	<h3>
@@ -303,7 +303,7 @@ td {
 			<tr>
 				<td><a href="#10098">Cross-Domain Misconfiguration</a></td>
 				<td align="center" class="risk-2">Medium</td>
-				<td align="center">10</td>
+				<td align="center">11</td>
 			</tr>
 			<tr>
 				<td><a href="#3">Session ID in URL Rewrite</a></td>
@@ -333,7 +333,7 @@ td {
 			<tr>
 				<td><a href="#90004">Insufficient Site Isolation Against Spectre Vulnerability</a></td>
 				<td align="center" class="risk-1">Low</td>
-				<td align="center">12</td>
+				<td align="center">10</td>
 			</tr>
 			<tr>
 				<td><a href="#2">Private IP Disclosure</a></td>
@@ -393,7 +393,7 @@ td {
 			<tr>
 				<td><a href="#10112">Session Management Response Identified</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">1</td>
+				<td align="center">2</td>
 			</tr>
 			<tr>
 				<td><a href="#10049">Storable and Cacheable Content</a></td>
@@ -403,7 +403,7 @@ td {
 			<tr>
 				<td><a href="#10049">Storable but Non-Cacheable Content</a></td>
 				<td align="center" class="risk-0">Informational</td>
-				<td align="center">10</td>
+				<td align="center">11</td>
 			</tr>
 		</table>
 		<div class="spacer-lg"></div>
@@ -650,7 +650,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18">http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:43:13">http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:43:13</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -712,7 +712,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -876,7 +876,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/assets/public/favicon_js.ico">http://host.docker.internal:3000/assets/public/favicon_js.ico</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/ftp">http://host.docker.internal:3000/ftp</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -938,7 +938,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/ftp/incident-support.kdbx">http://host.docker.internal:3000/ftp/incident-support.kdbx</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/ftp/eastere.gg">http://host.docker.internal:3000/ftp/eastere.gg</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1001,6 +1001,37 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/polyfills.js">http://host.docker.internal:3000/polyfills.js</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">Access-Control-Allow-Origin: *</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://host.docker.internal:3000/robots.txt">http://host.docker.internal:3000/robots.txt</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1154,7 +1185,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -1211,7 +1242,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq9&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq9&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ.0&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ.0&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1231,7 +1262,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">q5Z-_cMicAfeh8J-AAAA</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1242,7 +1273,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFqz&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFqz&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbf&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbf&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1262,7 +1293,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">q5Z-_cMicAfeh8J-AAAA</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1273,7 +1304,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcs&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcs&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz7&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz7&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1293,7 +1324,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">e3BM4mqOFoSkcUHlAAAE</td>
+						<td width="80%">zOQCjg34rS7ZSIr1AAAC</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1304,7 +1335,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD9&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD9&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVzj&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVzj&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1324,7 +1355,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bMtoKO5ZrHrD3ut2AAAC</td>
+						<td width="80%">zOQCjg34rS7ZSIr1AAAC</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1335,7 +1366,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGDa&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGDa&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRg&amp;sid=b6vWH3mpMcDgYsjHAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRg&amp;sid=b6vWH3mpMcDgYsjHAAAE</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1355,7 +1386,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bMtoKO5ZrHrD3ut2AAAC</td>
+						<td width="80%">b6vWH3mpMcDgYsjHAAAE</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1366,7 +1397,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=b6vWH3mpMcDgYsjHAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=b6vWH3mpMcDgYsjHAAAE</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1386,7 +1417,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bMtoKO5ZrHrD3ut2AAAC</td>
+						<td width="80%">b6vWH3mpMcDgYsjHAAAE</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1397,7 +1428,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1417,7 +1448,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">e3BM4mqOFoSkcUHlAAAE</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1428,7 +1459,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=websocket&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1448,7 +1479,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">q5Z-_cMicAfeh8J-AAAA</td>
+						<td width="80%">zOQCjg34rS7ZSIr1AAAC</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1459,7 +1490,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1479,7 +1510,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">q5Z-_cMicAfeh8J-AAAA</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1490,7 +1521,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1510,7 +1541,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">q5Z-_cMicAfeh8J-AAAA</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1521,7 +1552,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1541,7 +1572,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">e3BM4mqOFoSkcUHlAAAE</td>
+						<td width="80%">h0Zu3Dlf80VTNO3QAAAA</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1552,7 +1583,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1572,7 +1603,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent2">Evidence</td>
-						<td width="80%">bMtoKO5ZrHrD3ut2AAAC</td>
+						<td width="80%">zOQCjg34rS7ZSIr1AAAC</td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1884,7 +1915,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -1915,7 +1946,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2871,7 +2902,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18">http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -2903,37 +2934,6 @@ td {
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cross-Origin-Embedder-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39">http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3057,7 +3057,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18">http://host.docker.internal:3000/juice-shop/build/routes/fileServer.js:59:18</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3119,37 +3119,6 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39">http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%">Cross-Origin-Opener-Policy</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%"></td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/sitemap.xml">http://host.docker.internal:3000/sitemap.xml</a></td>
 					</tr>
 					<tr>
@@ -3180,7 +3149,7 @@ td {
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">12</td>
+					<td width="80%">10</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -3903,7 +3872,7 @@ td {
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFoV">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFoV</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ.0&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ.0&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3935,7 +3904,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq9&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq9&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbf&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbf&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3967,7 +3936,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFqz&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFqz&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVxS">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVxS</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -3999,7 +3968,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGaR">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGaR</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVY0">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVY0</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4031,7 +4000,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGBF">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGBF</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz7&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz7&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4063,7 +4032,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcs&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcs&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVzj&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVzj&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4095,7 +4064,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD9&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD9&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWP4">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWP4</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4127,7 +4096,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGDa&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGDa&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRg&amp;sid=b6vWH3mpMcDgYsjHAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRg&amp;sid=b6vWH3mpMcDgYsjHAAAE</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4159,7 +4128,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4191,7 +4160,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4223,7 +4192,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4255,7 +4224,7 @@ At &quot;High&quot; threshold this scan rule will not alert on client or server 
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4718,7 +4687,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFq8&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVaQ&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4749,7 +4718,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFFr0&amp;sid=q5Z-_cMicAfeh8J-AAAA</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbe&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4780,7 +4749,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGcn&amp;sid=e3BM4mqOFoSkcUHlAAAE</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVbs&amp;sid=h0Zu3Dlf80VTNO3QAAAA</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4811,7 +4780,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGD7&amp;sid=bMtoKO5ZrHrD3ut2AAAC</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGVz6&amp;sid=zOQCjg34rS7ZSIr1AAAC</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4842,7 +4811,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGzg&amp;sid=cuv4_SSkhAogT9ZDAAAG">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFGzg&amp;sid=cuv4_SSkhAogT9ZDAAAG</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRf&amp;sid=b6vWH3mpMcDgYsjHAAAE">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWRf&amp;sid=b6vWH3mpMcDgYsjHAAAE</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4873,7 +4842,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHHG&amp;sid=mK6nrJHiWL3PUlhsAAAI">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHHG&amp;sid=mK6nrJHiWL3PUlhsAAAI</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWsa&amp;sid=Ay0Tuj_6y2Yw8szgAAAG">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGWsa&amp;sid=Ay0Tuj_6y2Yw8szgAAAG</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4904,7 +4873,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHM4&amp;sid=EUcTUZM0mWlYOJvbAAAK">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHM4&amp;sid=EUcTUZM0mWlYOJvbAAAK</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGX8e&amp;sid=JAURxTvjR2WvW2D4AAAI">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGX8e&amp;sid=JAURxTvjR2WvW2D4AAAI</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4935,7 +4904,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHqP&amp;sid=HIgL4Wq4QJKWjypWAAAM">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFHqP&amp;sid=HIgL4Wq4QJKWjypWAAAM</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGXMj&amp;sid=6zhm1ltK3JqFni-lAAAK">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGXMj&amp;sid=6zhm1ltK3JqFni-lAAAK</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4966,7 +4935,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIBz&amp;sid=RPZoFZIi-wAiRd28AAAO">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIBz&amp;sid=RPZoFZIi-wAiRd28AAAO</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGXuS&amp;sid=XpXGiyApKtbPXoTZAAAM">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGXuS&amp;sid=XpXGiyApKtbPXoTZAAAM</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -4997,7 +4966,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIdM&amp;sid=UhEihdEYtcLr6MknAAAS">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIdM&amp;sid=UhEihdEYtcLr6MknAAAS</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYEM&amp;sid=3BQ0ASWwZL-LSrijAAAO">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYEM&amp;sid=3BQ0ASWwZL-LSrijAAAO</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5028,7 +4997,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIlA&amp;sid=cK-QTyzYYbA1rHvLAAAU">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIlA&amp;sid=cK-QTyzYYbA1rHvLAAAU</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYil&amp;sid=0WXzjkcYeGd6fiOVAAAS">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYil&amp;sid=0WXzjkcYeGd6fiOVAAAS</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5059,7 +5028,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIN9&amp;sid=Mevs53zwV_63qDBgAAAQ">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfFIN9&amp;sid=Mevs53zwV_63qDBgAAAQ</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYR0&amp;sid=WA_Hi7Uzab_4cD7nAAAQ">http://host.docker.internal:3000/socket.io/?EIO=4&amp;transport=polling&amp;t=PRfGYR0&amp;sid=WA_Hi7Uzab_4cD7nAAAQ</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5147,6 +5116,37 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/">http://host.docker.internal:3000/</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js&quot;&gt;&lt;/script&gt;</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">No links have been found while there are scripts, which is an indication that this is a modern web application.</td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/build/routes/assets/public/favicon_js.ico">http://host.docker.internal:3000/juice-shop/build/routes/assets/public/favicon_js.ico</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5270,7 +5270,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:286:9">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:286:9</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5301,7 +5301,7 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:328:13</a></td>
+						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/index.js:365:14</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -5395,37 +5395,6 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 						<td width="20%"
 							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5">http://host.docker.internal:3000/juice-shop/node_modules/express/lib/router/layer.js:95:5</a></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Method</td>
-						<td width="80%">GET</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Parameter</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Attack</td>
-						<td width="80%"></td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Evidence</td>
-						<td width="80%">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js&quot;&gt;&lt;/script&gt;</td>
-					</tr>
-					<tr>
-						<td width="20%"
-							class="indent2">Other Info</td>
-						<td width="80%">No links have been found while there are scripts, which is an indication that this is a modern web application.</td>
-					</tr>
-				
-					<tr>
-						<td width="20%"
-							class="indent1">URL</td>
-						<td width="80%"><a href="http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39">http://host.docker.internal:3000/juice-shop/node_modules/serve-index/index.js:145:39</a></td>
 					</tr>
 					<tr>
 						<td width="20%"
@@ -6149,9 +6118,41 @@ C&quot;� �&#39;�iǭ    IEND�B`�</td>
 json:continueCode</td>
 					</tr>
 				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
+						<td width="80%"><a href="http://host.docker.internal:3000/rest/continue-code">http://host.docker.internal:3000/rest/continue-code</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">POST</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%">continueCode</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">g872mOLbrgjJwK7DQ9p834o2nmvd5btQGkqYRlExW6z1PeaBMNyXV5ZMWrXO</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%">
+json:continueCode</td>
+					</tr>
+				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">1</td>
+					<td width="80%">2</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
@@ -6430,6 +6431,37 @@ json:continueCode</td>
 					<tr>
 						<td width="20%"
 							class="indent1">URL</td>
+						<td width="80%"><a href="http://host.docker.internal:3000/ftp/legal.md">http://host.docker.internal:3000/ftp/legal.md</a></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Method</td>
+						<td width="80%">GET</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Parameter</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Attack</td>
+						<td width="80%"></td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Evidence</td>
+						<td width="80%">max-age=0</td>
+					</tr>
+					<tr>
+						<td width="20%"
+							class="indent2">Other Info</td>
+						<td width="80%"></td>
+					</tr>
+				
+					<tr>
+						<td width="20%"
+							class="indent1">URL</td>
 						<td width="80%"><a href="http://host.docker.internal:3000/main.js">http://host.docker.internal:3000/main.js</a></td>
 					</tr>
 					<tr>
@@ -6615,7 +6647,7 @@ json:continueCode</td>
 				
 				<tr>
 					<td width="20%">Instances</td>
-					<td width="80%">10</td>
+					<td width="80%">11</td>
 				</tr>
 				<tr>
 					<td width="20%">Solution</td>
